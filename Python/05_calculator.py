@@ -38,25 +38,26 @@ for operacion in operaciones:
     
 operacion=(input("Seleccione una opción: "))
 
-if operacion == "1":
-    print("\nSUMA: Número_1 + Número_2")
-    input_2()
-    print(" => " + str(num1) + " + " + str(num2) + " = " + str(suma(num1,num2)))
-elif operacion == "2":
-    print("\nRESTA: Número_1 - Número_2")
-    input_2()
-    print(" => " + str(num1) + " - " + str(num2) + " = " + str(resta(num1,num2)))
-elif operacion == "3":
-    print("\nMULTIPLICACIÓN: Número_1 * Número_2")
-    input_2()
-    print(" => " + str(num1) + " * " + str(num2) + " = " + str(multiplicacion(num1,num2)))
-elif operacion == "4":
-    print("\nDIVISIÓN: Número_1 / Número_2")
-    input_2()
-    print(" => " + str(num1) + " / " + str(num2) + " = " + str(division(num1,num2)))
-elif operacion == "5":
-    print("\nEXPONENCIAL: e ^ Número_1")
-    input_1()
-    print(" => e ^ " + str(num1) + " = " + str(exponencial(num1)))
-else:
-    print("\nOPERACIÓN DESCONOCIDA")
+try:
+    if operacion == "1":
+        print("\nSUMA: Número_1 + Número_2")
+        input_2()
+        print(" => " + str(num1) + " + " + str(num2) + " = " + str(suma(num1,num2)))
+    elif operacion == "2":
+        print("\nRESTA: Número_1 - Número_2")
+        input_2()
+        print(" => " + str(num1) + " - " + str(num2) + " = " + str(resta(num1,num2)))
+    elif operacion == "3":
+        print("\nMULTIPLICACIÓN: Número_1 * Número_2")
+        input_2()
+        print(" => " + str(num1) + " * " + str(num2) + " = " + str(multiplicacion(num1,num2)))
+    elif operacion == "4":
+        print("\nDIVISIÓN: Número_1 / Número_2")
+        input_2()
+        print(" => " + str(num1) + " / " + str(num2) + " = " + str(division(num1,num2)))
+    elif operacion == "5":
+        print("\nEXPONENCIAL: e ^ Número_1")
+        input_1()
+        print(" => e ^ " + str(num1) + " = " + str(exponencial(num1))) 
+except:
+    print("\n<< OPERACIÓN DESCONOCIDA >>")
